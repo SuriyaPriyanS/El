@@ -1,5 +1,5 @@
 import express from 'express';
-import { auth, isStudent } from '../Middlware/auth.js';
+import { auth, isStudent} from '../Middlware/auth.js';
 import { caputrePayment, verifyPayment } from '../Controllers/Payments.js';
 
 const router = express.Router();

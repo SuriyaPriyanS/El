@@ -10,6 +10,7 @@ import  courseRouter from './Routers/course.js';
 import profileRouter from './Routers/Profile.js';
 import { cloudinaryConnect } from './Databases/Cloudinary.js';
 import cookieParser from 'cookie-parser';
+import jwt from 'jsonwebtoken';
 
 
 

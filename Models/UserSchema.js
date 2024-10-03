@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const UserSchema = new mongoose.Schema({
     firstName: {
@@ -48,9 +50,12 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: false  // If the image is auto-generated or optional, required can be false
     },
-    token: {
-        type: String  // Consider using secure cookies to handle tokens
-    },
+    tokens: [{
+        token: {
+          type: String,
+          required: true
+        }
+      }],
     resetPasswordTokenExpires: {
         type: Date
     },
