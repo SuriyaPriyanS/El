@@ -9,7 +9,7 @@ export const auth = (req, res, next) => {
     try {
         // Extract token from one of the three possible locations
         const token = req.body?.token || req.cookies?.token || req.header('Authorization')?.replace('Bearer ', '');
-
+        console.log('Token:', token);
         // If token is missing
         if (!token) {
             return res.status(401).json({
